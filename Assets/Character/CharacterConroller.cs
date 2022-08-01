@@ -44,10 +44,8 @@ public class CharacterConroller : MonoBehaviour
     {
         var xInput = Input.GetAxis("Horizontal");
         _animator.SetFloat("Speed", Mathf.Abs(xInput));
-        //if (isGrounded)
-        //{
         _rigidbody2D.velocity = new Vector2(xInput * currentSpeed, _rigidbody2D.velocity.y);
-        //}
+        
         if (xInput > 0 && !isFacingRight)
         {
             Flip();
