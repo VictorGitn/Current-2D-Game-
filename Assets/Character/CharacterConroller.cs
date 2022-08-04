@@ -10,14 +10,14 @@ public class CharacterConroller : MonoBehaviour
     [SerializeField] private bool isGrounded = false;
     [SerializeField] private LayerMask WhatIsGround;
     private float groundRadius = 0.2f;
-    private float currentSpeed;
+    private float actualSpeed;
 
     private Rigidbody2D _rigidbody2D;
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
     void Start()
     {
-        currentSpeed = _speed;
+        actualSpeed = _speed;
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -44,7 +44,7 @@ public class CharacterConroller : MonoBehaviour
     {
         var xInput = Input.GetAxis("Horizontal");
         _animator.SetFloat("Speed", Mathf.Abs(xInput));
-        _rigidbody2D.velocity = new Vector2(xInput * currentSpeed, _rigidbody2D.velocity.y);
+        _rigidbody2D.velocity = new Vector2(xInput * actualSpeed, _rigidbody2D.velocity.y);
         
         if (xInput > 0 && !isFacingRight)
         {
@@ -58,7 +58,7 @@ public class CharacterConroller : MonoBehaviour
 
     private void ResetSpeed()
     {
-        currentSpeed = _speed;
+        actualSpeed = _speed;
     }
 
     private void Jump()
@@ -71,7 +71,7 @@ public class CharacterConroller : MonoBehaviour
     {
         if (isGrounded)
         {
-            currentSpeed = 0;
+            actualSpeed = 0;
             _animator.SetTrigger("Atack");
         }
     }

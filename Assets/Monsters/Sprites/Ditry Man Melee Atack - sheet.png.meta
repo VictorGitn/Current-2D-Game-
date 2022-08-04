@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3c66256afa225cd4885dba93234b58f5
+guid: 2fde9d5d0ba547b4196ddabc4a903f89
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,85 +116,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dirty Man - sheet_0
+      name: Ditry Man Melee Atack - sheet_0
       rect:
         serializedVersion: 2
-        x: 8
+        x: 6
         y: 0
-        width: 18
+        width: 20
         height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5424627, y: -0.000000018839192}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 280884fe266cf204aae96c2773062903
-      internalID: 374236861
+      spriteID: f51fb5b337df3c3469408883458ace37
+      internalID: -1596911126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dirty Man - sheet_1
+      name: Ditry Man Melee Atack - sheet_1
       rect:
         serializedVersion: 2
-        x: 40
+        x: 36
         y: 0
-        width: 18
+        width: 22
         height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5943619, y: -0.000000018839192}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76c4908cafd9e694cad4795ac97d86a8
-      internalID: -1837613327
+      spriteID: ca3cb5d4a6663ed4aa4ff964f4edb3e2
+      internalID: 1635128235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dirty Man - sheet_2
+      name: Ditry Man Melee Atack - sheet_2
       rect:
         serializedVersion: 2
-        x: 72
+        x: 65
         y: 0
-        width: 18
+        width: 25
         height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.6472043, y: 0.0033700482}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65340ff77b413ec41acc8bbe642b7d8d
-      internalID: -1232776926
+      spriteID: 751ecf94d4c11e446ba5cd0f717bcf04
+      internalID: 2101674991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dirty Man - sheet_3
+      name: Ditry Man Melee Atack - sheet_3
       rect:
         serializedVersion: 2
-        x: 104
+        x: 97
         y: 0
-        width: 18
+        width: 25
         height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.65852815, y: -0.000000018839192}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc747571c5c62644bb048c2f881331dd
-      internalID: -2074023414
+      spriteID: 16b2e50ea34ff2542ba9294c640fcd32
+      internalID: 1748516675
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dirty Man - sheet_1: -1837613327
-      Dirty Man - sheet_0: 374236861
-      Dirty Man - sheet_2: -1232776926
-      Dirty Man - sheet_3: -2074023414
+      Ditry Man Melee Atack - sheet_0: -1596911126
+      Ditry Man Melee Atack - sheet_1: 1635128235
+      Ditry Man Melee Atack - sheet_3: 1748516675
+      Ditry Man Melee Atack - sheet_2: 2101674991
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -4,98 +4,118 @@ using UnityEngine;
 
 public class DirtyMan : Enemy
 {
-    [SerializeField] bool isFacingRight = true;
-    [SerializeField] float _raycastingDistance = 1f;
-    [SerializeField] string terrainTag;
-    [SerializeField] private LayerMask WhatIsGround;
-
-
+    private BulletSpawn bulletSpawnScript;
+    private PlayerDetector playerDetector;
+    private TerrainChecker terrainChecker;
     private Rigidbody2D _rigidbody2D;
     private Animator _animator;
-    private SpriteRenderer _spriteRenderer;
 
+    [SerializeField] private float actualSpeed;
     [SerializeField] private float speed;
     public override float Speed {
-        get { return speed; }
-        set { speed = value; } 
+        get => speed; 
+        set => speed = value; 
     }
     private int health;
     public override int Health {
-        get { return health; }
-        set { health = value; }
+        get => health;
+        set => health = value;
+    }
+    private bool isFacingRight = true;
+    public override bool IsFacingRight
+    {
+        get => isFacingRight;
+        set => isFacingRight = value;
     }
 
     void Start()
     {
+        playerDetector = GetComponentInChildren<PlayerDetector>();
+        bulletSpawnScript = GetComponentInChildren<BulletSpawn>();
+        terrainChecker = GetComponentInChildren<TerrainChecker>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        actualSpeed = Speed;
     }
-
 
     void FixedUpdate()
     {
+        Atack();
         Patrol();
     }
 
     public void Patrol()
     {
-        CheckForWalls();
-        CheckForHoles();
+        terrainChecker.CheckForWalls();
+        terrainChecker.CheckForHoles();
         Move();
     }
     public override void Move()
     {
-        Vector3 directionTranslation = (isFacingRight) ? transform.right : -transform.right;
-        directionTranslation *= Time.deltaTime * speed;
-        _animator.SetFloat("Speed", speed);
-        transform.Translate(directionTranslation);
+        base.Move();
+        _animator.SetFloat("Speed", Speed);
     }
 
-    private void CheckForWalls()
+    public override void Flip()
     {
-        Vector3 raycastDirection = (isFacingRight) ? Vector3.right : Vector3.left;
+        base.Flip();
+        bulletSpawnScript.TurnSpawnPosition();
+    }
 
-        // Raycasting takes as parameters a Vector3 which is the point of origin, another Vector3 which gives the direction, and finally a float for the maximum distance of the raycast
-        var originRay = transform.position + raycastDirection * _raycastingDistance - new Vector3(0f, 0.25f, 0f);
-        RaycastHit2D hitForvard = Physics2D.Raycast(originRay, raycastDirection, 0.075f, WhatIsGround);
-
-        // if we hit something, check its tag and act accordingly
-        if (hitForvard.collider != null)
+    public override void Atack()
+    {
+        if (playerDetector.PlayerDetected)
         {
-            if (hitForvard.transform.tag == "Terrain")
+            if (playerDetector.PlayerStayNear)
             {
-                Flip();
+                MeleeAtack();
+            }
+            else
+            {
+                longRangeAtack();
             }
         }
+        else
+        {
+            Speed = actualSpeed;
+            _animator.SetBool("Player Is Near", false);
+            _animator.SetBool("Player In Atack Zone", false);
+        }
     }
-    private void CheckForHoles()
+
+    private void MeleeAtack()
     {
-        Vector3 raycastDirection = (isFacingRight) ? Vector3.right : Vector3.left;
+        TurnToPlayer();
+        Speed = 0;
+        _animator.SetBool("Player Is Near", playerDetector.PlayerStayNear);
+    }
+    private void longRangeAtack()
+    {
+        _animator.SetBool("Player Is Near", false);
+        TurnToPlayer();
+        Speed = 0;
+        _animator.SetBool("Player In Atack Zone", playerDetector.PlayerDetected);
+    }
 
-        // Raycasting takes as parameters a Vector3 which is the point of origin, another Vector3 which gives the direction, and finally a float for the maximum distance of the raycast
-        var originRay = transform.position + raycastDirection * _raycastingDistance - new Vector3(0f, 0.25f, 0f);
-        RaycastHit2D hitBelow = Physics2D.Raycast(originRay, Vector3.down, 1f, WhatIsGround);
-
-        if (hitBelow.collider == null)
+    private void TurnToPlayer()
+    {
+        if (IsFacingRight && playerDetector.DirectionToTarget.x < 0)
         {
             Flip();
         }
-    }
-
-    private void Flip()
-    {
-        isFacingRight = !isFacingRight;
-        _spriteRenderer.flipX = !_spriteRenderer.flipX;
-    }
-    public override void Atack()
-    {
-        throw new System.NotImplementedException();
+        if (!IsFacingRight && playerDetector.DirectionToTarget.x > 0)
+        {
+            Flip();
+        }
     }
 
     public override void Death()
     {
         throw new System.NotImplementedException();
     }
-
+    public void SpawnBullet()
+    {
+        bulletSpawnScript.SpawnBullet();
+    }
 }

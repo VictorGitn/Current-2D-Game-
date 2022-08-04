@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3c66256afa225cd4885dba93234b58f5
+guid: 96db1891f933d8f4ca70915a04e6f690
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,85 +116,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dirty Man - sheet_0
+      name: Ditry Man Bullet - sheet_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 0
-        width: 18
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 13
+        y: 14
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 280884fe266cf204aae96c2773062903
-      internalID: 374236861
+      spriteID: 809ed4c24a2b52444bb71c6410fb314f
+      internalID: -1805356855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dirty Man - sheet_1
+      name: Ditry Man Bullet - sheet_1
       rect:
         serializedVersion: 2
-        x: 40
-        y: 0
-        width: 18
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 44
+        y: 14
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76c4908cafd9e694cad4795ac97d86a8
-      internalID: -1837613327
+      spriteID: a02e522430a1aa241b816362b8a2bf9e
+      internalID: 68170759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dirty Man - sheet_2
+      name: Ditry Man Bullet - sheet_2
       rect:
         serializedVersion: 2
-        x: 72
-        y: 0
-        width: 18
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 77
+        y: 13
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65340ff77b413ec41acc8bbe642b7d8d
-      internalID: -1232776926
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dirty Man - sheet_3
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 0
-        width: 18
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc747571c5c62644bb048c2f881331dd
-      internalID: -2074023414
+      spriteID: 760d272598b95d840a941d584cb416cc
+      internalID: 972837606
       vertices: []
       indices: 
       edges: []
@@ -210,10 +189,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dirty Man - sheet_1: -1837613327
-      Dirty Man - sheet_0: 374236861
-      Dirty Man - sheet_2: -1232776926
-      Dirty Man - sheet_3: -2074023414
+      Ditry Man Bullet - sheet_2: 972837606
+      Ditry Man Bullet - sheet_1: 68170759
+      Ditry Man Bullet - sheet_0: -1805356855
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

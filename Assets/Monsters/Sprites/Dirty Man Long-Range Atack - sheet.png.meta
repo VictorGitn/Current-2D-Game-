@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3c66256afa225cd4885dba93234b58f5
+guid: da54cac171ce7734199595023ff6847f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dirty Man - sheet_0
+      name: Dirty Man Long-Range Atack - sheet_0
       rect:
         serializedVersion: 2
         x: 8
@@ -130,71 +130,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 280884fe266cf204aae96c2773062903
-      internalID: 374236861
+      spriteID: c24bd0fd90f094047a8155082c7874b0
+      internalID: 1286012508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dirty Man - sheet_1
+      name: Dirty Man Long-Range Atack - sheet_1
       rect:
         serializedVersion: 2
-        x: 40
+        x: 36
         y: 0
-        width: 18
+        width: 22
         height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5428919, y: -0.000000018839192}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76c4908cafd9e694cad4795ac97d86a8
-      internalID: -1837613327
+      spriteID: 052588dd0305c494f9be25606fb79418
+      internalID: -1417236923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dirty Man - sheet_2
+      name: Dirty Man Long-Range Atack - sheet_2
       rect:
         serializedVersion: 2
-        x: 72
+        x: 64
         y: 0
-        width: 18
+        width: 26
         height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.61613786, y: -0.000000018839192}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65340ff77b413ec41acc8bbe642b7d8d
-      internalID: -1232776926
+      spriteID: 2996006447505b6468241d4f2aa45f85
+      internalID: -885950302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dirty Man - sheet_3
+      name: Dirty Man Long-Range Atack - sheet_4
       rect:
         serializedVersion: 2
-        x: 104
+        x: 102
         y: 0
-        width: 18
+        width: 20
         height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5377449, y: -0.000000018839192}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc747571c5c62644bb048c2f881331dd
-      internalID: -2074023414
+      spriteID: 20fc816f5a033bc4aac8c6fe0fce1a67
+      internalID: -319380555
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dirty Man - sheet_1: -1837613327
-      Dirty Man - sheet_0: 374236861
-      Dirty Man - sheet_2: -1232776926
-      Dirty Man - sheet_3: -2074023414
+      Dirty Man Long-Range Atack - sheet_0: 1286012508
+      Dirty Man Long-Range Atack - sheet_2: -885950302
+      Dirty Man Long-Range Atack - sheet_1: -1417236923
+      Dirty Man Long-Range Atack - sheet_4: -319380555
+      Dirty Man Long-Range Atack - sheet_3: -1900111113
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
